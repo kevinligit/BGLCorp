@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "s3:GetObject",
+              "s3:PutObject",
+              "s3:ListBucket",
+              "s3:GetBucketVersioning",
+              "s3:PutBucketVersioning"
+          ],
+          "Resource": [
+              "arn:aws:s3:::ap-southeast-2-test",
+              "arn:aws:s3:::ap-southeast-2-test/*"
+          ]
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "kms:Decrypt"
+          ],
+          "Resource": "arn:aws:kms:ap-southeast-2:111122223333:key/12345"
+      }
+  ]
+}

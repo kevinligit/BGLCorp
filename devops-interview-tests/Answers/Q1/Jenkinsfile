@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Output InstanceId') {
+            steps {
+                sh './instance-finder.sh'
+            }
+        }
+    }
+}
